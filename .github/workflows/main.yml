@@ -24,9 +24,9 @@ jobs:
       - name: Integrate Dependencies 
         run: npm install
         
-      - name: Hello world action step
+      - name: Extract Project Version
         uses: ./ 
         id: output_package_version
 
-      - name: Get the output time
-        run: echo "The time was ${{ steps.output_package_version.outputs.package_version }}"
+      - name: Output Project Version
+        run: echo "Project Version - ${{ steps.output_package_version.outputs.package_version }}"
