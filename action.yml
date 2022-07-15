@@ -1,13 +1,14 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
+#
+#
+#
+
+name: 'Snowflake'
+description: 'Simple Action to extract the Version within the File "package.json"'
+
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  version_number:
+    description: 'Version Number obtained from File "package.json"'
+    
 runs:
   using: 'node16'
   main: 'index.js'
