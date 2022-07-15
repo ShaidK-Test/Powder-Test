@@ -1,0 +1,24 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+   
+jobs:
+  check_package_json_job:
+    runs-on: windows_latest
+    name: test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Hello world action step
+        uses: ./ 
+        id: output_package_version
+
+      - name: Get the output time
+        run: echo "The time was ${{ steps.output_package_version.outputs.package_version }}"
