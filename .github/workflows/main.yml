@@ -10,7 +10,7 @@ on:
    
 jobs:
   check_package_json_job:
-    runs-on: windows_latest
+    runs-on: windows-latest
     name: test
     steps:
       - name: Checkout
