@@ -16,6 +16,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         
+      - name: Configure NodeJS Environment 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          
+      - name: Integrate Dependencies 
+        run: npm ci
+        
       - name: Hello world action step
         uses: ./ 
         id: output_package_version
