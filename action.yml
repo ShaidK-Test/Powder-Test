@@ -6,7 +6,7 @@ name: 'Snowflake'
 description: 'Simple Action to extract the Version within the File "package.json"'
 
 outputs:
-  version_number:
+  package_version:
     description: 'Version Number obtained from File "package.json"'
     
 runs:
