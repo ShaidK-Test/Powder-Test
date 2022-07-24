@@ -27,6 +27,9 @@ jobs:
       - name: Extract Project Version
         uses: ./ 
         id: output_package_version
+        with:
+          require_property: 'version'
+        
 
       - name: Output Project Version
         run: echo "Project Version - ${{ steps.output_package_version.outputs.package_version }}"
