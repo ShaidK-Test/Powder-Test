@@ -5,6 +5,11 @@
 name: 'Snowflake'
 description: 'Simple Action to extract the Version within the File "package.json"'
 
+inputs:
+  require_property:
+    description: 'Name of the Property required within Package JSON File'
+    required: true
+
 outputs:
   package_version:
     description: 'Version Number obtained from File "package.json"'
