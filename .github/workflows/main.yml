@@ -40,7 +40,7 @@ jobs:
         run: echo "Project Version - ${{ steps.output_package_version.outputs.property_version }}"
         
       - name: Output Project Name
-        run: echo "Project Name - ${{ steps.output_package_name.outputs }}"
+        run: echo "Project Name - ${{ steps.output_package_name.outputs.name }}"
         
         
         
