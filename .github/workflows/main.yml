@@ -24,12 +24,26 @@ jobs:
       - name: Integrate Dependencies 
         run: npm install
         
+      - name: Extract Project Name
+        uses: ./ 
+        id: output_package_name
+        with:
+          require_property: 'name'
+        
       - name: Extract Project Version
         uses: ./ 
         id: output_package_version
         with:
           require_property: 'version'
-        
 
       - name: Output Project Version
-        run: echo "Project Version - ${{ steps.output_package_version.outputs.package_version }}"
+        run: echo "Project Version - ${{ steps.output_package_version.outputs.property_version }}"
+        
+      - name: Output Project Name
+        run: echo "Project Name - ${{ steps.output_package_name.outputs.property_name }}"
+        
+        
+        
+        
+        
+        
