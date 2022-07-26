@@ -37,10 +37,10 @@ jobs:
           require_property: 'version'
 
       - name: Output Project Version
-        run: echo "Project Version - ${{ steps.output_package_version.outputs.property_${package_json_property} }}"
+        run: echo "Project Version - ${{ steps.output_package_version.outputs.property_version }}"
         
       - name: Output Project Name
-        run: echo "Project Name - ${{ steps.output_package_name.outputs.property_${package_json_property} }}"
+        run: echo "Project Name - ${{ steps.output_package_name.outputs }}"
         
         
         
