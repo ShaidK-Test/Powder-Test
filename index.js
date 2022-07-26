@@ -6,7 +6,7 @@ const package_json = require('./package.json');
 const core = require('@actions/core');
 
 function getExtensionManifestProperty(arg) {
-    console.log("Executing Snowflake Action to extract following Property: ${arg}")
+    console.log("Executing Snowflake Action to extract following Property: ${arg} " + arg)
     if (package_json[arg] == undefined)
         throw new TypeError("Properties '${arg}' doesn't exist within File 'package.json'");
 
