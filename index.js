@@ -5,10 +5,9 @@
 const package_json = require('./package.json');
 const core = require('@actions/core');
 
-exports.inputProperty = (arg) => {
-    if (package_json[arg] == undefined) {
-        throw new TypeError("Properties '${arg}' doesn't exist within File 'package.json'", "index.js", "17")
-    }
+function getExtensionManifestProperty(arg) {
+    if (package_json[arg] == undefined)
+        throw new TypeError("Properties '${arg}' doesn't exist within File 'package.json'");
 
     return package_json[arg]; 
 };
@@ -16,12 +15,13 @@ exports.inputProperty = (arg) => {
 async function run() {
     try {
         const package_json_property = core.getInput('require_property');
-        core.setOutput("property_${package_json_property}", inputProperty(package_json_property));
+        core.setOutput("property_${package_json_property}", getExtensionManifestProperty(package_json_property));
     }
     catch (err) {
-      core.setFailed(err.message);
+        core.setFailed(err.message);
     }
 }
+
+exports.getExtensionManifestProperty = getExtensionManifestProperty;
   
 run()
-
