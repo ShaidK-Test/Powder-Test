@@ -25,13 +25,13 @@ jobs:
         run: npm install
         
       - name: Extract Project Name
-        uses: ./ 
+        uses: ShaidK/Snowflake@v2 
         id: output_package_name
         with:
           require_property: 'name'
         
       - name: Extract Project Version
-        uses: ./ 
+        uses: ShaidK/Snowflake@v2
         id: output_package_version
         with:
           require_property: 'version'
