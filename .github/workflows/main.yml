@@ -31,13 +31,13 @@ jobs:
         uses: ShaidK/Snowflake@v2.0.0
         id: output_package_name
         with:
-          require_property: 'name'
+          required_property: 'name'
         
       - name: Extract Project Version
         uses: ShaidK/Snowflake@v2.0.0
         id: output_package_version
         with:
-          require_property: 'version'
+          required_property: 'version'
 
       - name: Output Project Version
         run: echo "Project Version - ${{ steps.output_package_version.outputs.property_version }}"
