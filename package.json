@@ -1,9 +1,9 @@
 {
-    "name": "snowflake-action",
+    "name": "powertest-action",
     "description": "Simple Action to obtain the Project Version from the File 'package.json'",
     "author": "ShaidK",
     "license": "MIT",
-    "version": "0.0.1",
+    "version": "1.5.1",
     "main": "index.js",
     "scripts": 
     {
