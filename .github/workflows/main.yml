@@ -24,17 +24,14 @@ jobs:
       - name: Integrate Dependencies 
         run: npm install
         
-        
-        
-        
       - name: Extract Project Name
-        uses: ShaidK/Snowflake@v2.1.0
+        uses: ShaidK/Snowflake@v2.3.0
         id: output_package_name
         with:
           required_property: 'name'
         
       - name: Extract Project Version
-        uses: ShaidK/Snowflake@v2.1.0
+        uses: ShaidK/Snowflake@v2.3.0
         id: output_package_version
         with:
           required_property: 'version'
